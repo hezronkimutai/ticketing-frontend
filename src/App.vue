@@ -1,3 +1,4 @@
+
 <template>
   <div id="app" class="min-h-screen bg-gray-100">
     <Header />

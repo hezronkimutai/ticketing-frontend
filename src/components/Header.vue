@@ -5,11 +5,11 @@
       <router-link to="/" class="hover:text-blue-200">Home</router-link>
       <router-link to="/events" class="hover:text-blue-200">Events</router-link>
       <router-link to="/categories" class="hover:text-blue-200">Categories</router-link>
-      <button class="bg-white text-blue-600 px-4 py-2 rounded">Login</button>
+      <router-link to="/signin" class="hover:text-blue-200">Signin</router-link>
+      <router-link to="/signup" class="hover:text-blue-200">Signup</router-link>
     </nav>
   </header>
 </template>
-
 <script>
 export default {
   name: 'HeaderComponent'

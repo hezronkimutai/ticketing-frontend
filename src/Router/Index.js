@@ -5,6 +5,9 @@ import VerifyEmail from "@/components/verifyEmail/verifyEmail.vue";
 import HomePage from "@/pages/HomePage.vue";
 import Signup from "@/pages/Signup.vue";
 import { createRouter, createWebHistory } from "vue-router";
+import Categories from "../components/Categories.vue";
+import FeaturedEvents from "../components/FeaturedEvents.vue";
+import EventStatus from "../components/EventStatus.vue";
 
 const routes = [
   {
@@ -37,6 +40,21 @@ const routes = [
     name: "ResetPassword",
     component: ResetPassword,
   },
+  {
+    path: "/book",
+    name: "CategoriesComponent",
+    component: Categories,
+  },
+  {
+    path:"/events",
+    name:"FeaturedEvents",
+    component: FeaturedEvents, // Assuming FeaturedEvents component is defined elsewhere
+  },
+  {
+    path:"/status",
+    name:"EventStatusComponent",
+    component: EventStatus,
+  }
 ];
 
 const router = createRouter({

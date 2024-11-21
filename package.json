@@ -16,6 +16,9 @@
     "vue": "^3.2.13",
     "vue-router": "^4.4.5"
   },
+  "standard": {
+    "parser": "babel-eslint"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",

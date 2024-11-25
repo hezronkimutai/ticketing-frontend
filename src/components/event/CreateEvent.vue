@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="flex items-center justify-center py-4 min-h-screen bg-gray-100">
     <div class="w-full max-w-4xl bg-white p-8 rounded-lg shadow-lg">
       <h1 class="text-3xl font-semibold text-center text-gray-800 mb-6">Create Event</h1>
 

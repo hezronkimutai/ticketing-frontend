@@ -12,8 +12,14 @@ import About from "@/pages/About.vue";
 import PrivacyPolicy from "@/pages/PrivacyPolicy.vue";
 import Contact from "@/pages/Contact.vue";
 import CreateEvent from "@/pages/CreateEvent.vue";
+import BookTicket from "@/pages/BookTicket.vue";
 
 const routes = [
+  {
+    path: "/book-ticket",
+    name: "BookTicketPage",
+    component: BookTicket,
+  },
   {
     path: "/create-event",
     name: "CreateEventPage",
@@ -57,7 +63,7 @@ const routes = [
   {
     path: "/events",
     name: "FeaturedEvents",
-    component: FeaturedEvents, 
+    component: FeaturedEvents,
   },
   {
     path: "/status",

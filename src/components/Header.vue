@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-blue-600 text-white py-4 px-6 flex justify-between items-center">
+  <header class="bg-blue-600 text-white py-2 px-6 flex justify-between items-center">
     <div class="text-2xl font-bold">TicketMaster</div>
     <nav class="flex space-x-4">
       <router-link to="/" class="hover:text-blue-200">Home</router-link>

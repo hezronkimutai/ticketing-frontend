@@ -19,6 +19,12 @@
             Events
           </router-link>
           <router-link 
+            to="/create-event" 
+            class="bg-primary-600 text-white hover:bg-primary-700 px-4 py-2 rounded-md text-sm font-medium"
+          >
+            Create Event
+          </router-link>
+          <router-link 
             to="/login" 
             class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
           >
@@ -30,6 +36,7 @@
           >
             Sign Up
           </router-link>
+
         </div>
       </div>
     </div>

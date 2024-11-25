@@ -11,8 +11,26 @@ import EventStatus from "../components/EventStatus.vue";
 import About from "@/pages/About.vue";
 import PrivacyPolicy from "@/pages/PrivacyPolicy.vue";
 import Contact from "@/pages/Contact.vue";
+import CreateEvent from "@/pages/CreateEvent.vue";
+import BookTicket from "@/pages/BookTicket.vue";
+import CreateTicketCategory from "@/pages/CreateTicketCategory.vue";
 
 const routes = [
+  {
+    path: "/create-ticket-category",
+    name: "CreateTicketCategoryPage",
+    component: CreateTicketCategory,
+  },
+  {
+    path: "/book-ticket",
+    name: "BookTicketPage",
+    component: BookTicket,
+  },
+  {
+    path: "/create-event",
+    name: "CreateEventPage",
+    component: CreateEvent,
+  },
   {
     path: "/",
     name: "HomePage",
@@ -51,7 +69,7 @@ const routes = [
   {
     path: "/events",
     name: "FeaturedEvents",
-    component: FeaturedEvents, 
+    component: FeaturedEvents,
   },
   {
     path: "/status",

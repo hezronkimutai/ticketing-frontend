@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-blue-800 text-white py-8 px-6">
+  <footer class="bg-blue-800 text-white py-2 px-6">
     <div class="container mx-auto flex justify-between">
       <div>
         <h3 class="text-xl font-bold">TicketMaster</h3>

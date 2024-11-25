@@ -21,7 +21,7 @@ export const getById = async (id) => {
   }
 }
 
-export const createEvent = async (eventData) => {
+export const createEvent = async (eventStore, eventData) => {
   try {
     const response = await api.post(API_URL, eventData);
     return response.data;

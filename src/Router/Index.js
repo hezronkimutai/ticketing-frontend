@@ -11,8 +11,14 @@ import EventStatus from "../components/EventStatus.vue";
 import About from "@/pages/About.vue";
 import PrivacyPolicy from "@/pages/PrivacyPolicy.vue";
 import Contact from "@/pages/Contact.vue";
+import CreateEvent from "@/pages/CreateEvent.vue";
 
 const routes = [
+  {
+    path: "/create-event",
+    name: "CreateEventPage",
+    component: CreateEvent,
+  },
   {
     path: "/",
     name: "HomePage",

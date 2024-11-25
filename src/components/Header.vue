@@ -6,6 +6,7 @@
       <router-link to="/events" class="hover:text-blue-200">Events</router-link>
       <router-link to="/book" class="hover:text-blue-200">Book</router-link>
       <router-link to="/status" class="hover:text-blue-200">Status</router-link>
+      <router-link to="/create-event"> Create Event </router-link>
       <router-link to="/signin" class="hover:text-blue-200">Signin</router-link>
       <router-link to="/signup" class="hover:text-blue-200">Signup</router-link>
     </nav>

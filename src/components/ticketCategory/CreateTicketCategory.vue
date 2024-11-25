@@ -1,17 +1,9 @@
 <template>
   <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
-      <h1 class="text-2xl font-semibold text-center text-gray-800 mb-6">Create Ticket</h1>
+      <h1 class="text-2xl font-semibold text-center text-gray-800 mb-6">Create Ticket Category</h1>
 
-      <form @submit.prevent="handleCreateTicket" class="space-y-4">
-        <!-- User ID Input -->
-        <div>
-          <label for="userId" class="block text-sm font-medium text-gray-700 mb-1">User ID</label>
-          <input type="text" id="userId" v-model="formData.userId"
-            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-300"
-            required />
-        </div>
-
+      <form @submit.prevent="handleCreateTicketCategory" class="space-y-4">
         <!-- Event ID Input -->
         <div>
           <label for="eventId" class="block text-sm font-medium text-gray-700 mb-1">Event ID</label>
@@ -20,26 +12,18 @@
             required />
         </div>
 
-        <!-- Ticket Category ID Input -->
-        <div>
-          <label for="ticketCategoryId" class="block text-sm font-medium text-gray-700 mb-1">Ticket Category ID</label>
-          <input type="text" id="ticketCategoryId" v-model="formData.ticketCategoryId"
-            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-300"
-            required />
-        </div>
-
         <!-- Name Input -->
         <div>
-          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Category Name</label>
           <input type="text" id="name" v-model="formData.name"
             class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-300"
             required />
         </div>
 
-        <!-- Email Input -->
+        <!-- Price Input -->
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-          <input type="email" id="email" v-model="formData.email"
+          <label for="price" class="block text-sm font-medium text-gray-700 mb-1">Price</label>
+          <input type="number" id="price" v-model="formData.price" step="0.01"
             class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-300"
             required />
         </div>
@@ -47,7 +31,7 @@
         <!-- Submit Button -->
         <button type="submit"
           class="w-full py-2 px-4 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300">
-          Create Ticket
+          Create Category
         </button>
       </form>
 
@@ -60,29 +44,29 @@
 </template>
 
 <script>
-import { useTicketStore } from '@/stores/ticket';
-import { createTicket } from '../../services/ticket.api'; // Adjust the import path as needed
+import { useCategoryStore } from '@/stores/category';
+import { createTicketCategory } from '../../services/categories.api'; // Adjust the import path as needed
 import { reactive, ref } from 'vue';
 
 export default {
-  name: 'CreateTicketForm',
+  name: 'CreateTicketCategoryForm',
   setup() {
-    const ticketStore = useTicketStore();
-
+    const categoryStore = useCategoryStore();
     const formData = reactive({
-      userId: '',
       eventId: '',
-      ticketCategoryId: '',
       name: '',
-      email: '',
+      price: '',
     });
 
     const errorMessage = ref('');
 
-    const handleCreateTicket = async () => {
+    const handleCreateTicketCategory = async () => {
       try {
-        await createTicket(ticketStore, formData); // Call the service with formData
-        alert('Ticket created successfully!'); // Optional success feedback
+        formData.price = parseFloat(formData.price);
+
+        await createTicketCategory(categoryStore, formData);
+        alert('Ticket category created successfully!');
+        Object.assign(formData, { eventId: '', name: '', price: '' });
       } catch (error) {
         errorMessage.value = error.response?.data?.message || 'An error occurred. Please try again.';
       }
@@ -90,7 +74,7 @@ export default {
 
     return {
       formData,
-      handleCreateTicket,
+      handleCreateTicketCategory,
       errorMessage,
     };
   },

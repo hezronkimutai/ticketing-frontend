@@ -15,6 +15,10 @@
               <router-link to="/book-ticket" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
                 Book Now
               </router-link>
+              <router-link to="/create-ticket-category"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                Create Category
+              </router-link>
             </div>
           </div>
         </div>

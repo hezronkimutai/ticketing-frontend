@@ -22,7 +22,7 @@ export const getById = async (id) => {
   }
 }
 
-export const createCategory = async (categoryData) => {
+export const createCategory = async (eventStore, categoryData) => {
   try {
     const response = await api.post(API_URL, categoryData);
     return response.data;

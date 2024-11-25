@@ -22,7 +22,7 @@ export const getById = async (id) => {
   }
 }
 
-export const createTicket = async (ticketData) => {
+export const createTicket = async (ticketStore, ticketData) => {
   try {
     const response = await api.post(API_URL, ticketData);
     return response.data;

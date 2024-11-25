@@ -13,8 +13,14 @@ import PrivacyPolicy from "@/pages/PrivacyPolicy.vue";
 import Contact from "@/pages/Contact.vue";
 import CreateEvent from "@/pages/CreateEvent.vue";
 import BookTicket from "@/pages/BookTicket.vue";
+import CreateTicketCategory from "@/pages/CreateTicketCategory.vue";
 
 const routes = [
+  {
+    path: "/create-ticket-category",
+    name: "CreateTicketCategoryPage",
+    component: CreateTicketCategory,
+  },
   {
     path: "/book-ticket",
     name: "BookTicketPage",

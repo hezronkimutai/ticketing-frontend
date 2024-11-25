@@ -1,16 +1,16 @@
 <template>
   <div class="container mx-auto px-4">
-    <SignupForm />
+    <About />
   </div>
 </template>
 
 <script>
-import SignupForm from '@/components/signup/Signup.vue'
+import About from '@/components/about/About.vue';
 
 export default {
-  name: 'SignupPage',
+  name: 'AboutPage',
   components: {
-    SignupForm
+    About
   }
 }
 </script>

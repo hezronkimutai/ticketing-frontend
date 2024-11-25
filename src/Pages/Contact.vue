@@ -1,16 +1,16 @@
 <template>
   <div class="container mx-auto px-4">
-    <SignupForm />
+    <Contact />
   </div>
 </template>
 
 <script>
-import SignupForm from '@/components/signup/Signup.vue'
+import Contact from '@/components/contact/Contact.vue'
 
 export default {
-  name: 'SignupPage',
+  name: 'ContactPage',
   components: {
-    SignupForm
+    Contact
   }
 }
 </script>

@@ -8,6 +8,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import Categories from "../components/Categories.vue";
 import FeaturedEvents from "../components/FeaturedEvents.vue";
 import EventStatus from "../components/EventStatus.vue";
+import About from "@/pages/About.vue";
+import PrivacyPolicy from "@/pages/PrivacyPolicy.vue";
+import Contact from "@/pages/Contact.vue";
 
 const routes = [
   {
@@ -46,14 +49,29 @@ const routes = [
     component: Categories,
   },
   {
-    path:"/events",
-    name:"FeaturedEvents",
-    component: FeaturedEvents, // Assuming FeaturedEvents component is defined elsewhere
+    path: "/events",
+    name: "FeaturedEvents",
+    component: FeaturedEvents, 
   },
   {
-    path:"/status",
-    name:"EventStatusComponent",
+    path: "/status",
+    name: "EventStatusComponent",
     component: EventStatus,
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: About,
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: Contact,
+  },
+  {
+    path: "/Privacy-policy",
+    name: "PrivacyPolicy",
+    component: PrivacyPolicy,
   }
 ];
 

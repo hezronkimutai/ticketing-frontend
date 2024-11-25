@@ -1,15 +1,9 @@
 <template>
   <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
-      <h1 class="text-2xl font-semibold text-center text-gray-800 mb-6">Signup</h1>
+      <h1 class="text-2xl font-semibold text-center text-gray-800 mb-6">Signin</h1>
 
-      <form @submit.prevent="handleSignup">
-        <div class="mb-4">
-          <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
-          <input type="text" id="username" v-model="formData.username"
-            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-300"
-            placeholder="Enter your username" required />
-        </div>
+      <form @submit.prevent="handleSignin">
         <div class="mb-4">
           <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
           <input type="email" id="email" v-model="formData.email"
@@ -24,7 +18,7 @@
         </div>
         <button type="submit"
           class="w-full py-2 px-4 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300">
-          Sign Up
+          Sign In
         </button>
       </form>
     </div>
@@ -35,7 +29,7 @@
 import { reactive } from 'vue';
 
 export default {
-  name: 'SignupForm',
+  name: 'SigninForm',
   setup() {
     const formData = reactive({
       username: '',
@@ -43,14 +37,14 @@ export default {
       password: '',
     });
 
-    const handleSignup = () => {
-      console.log('Signup Data:', formData);
-      alert('Signup Successful');
+    const handleSignin = () => {
+      console.log('Signin Data:', formData);
+      alert('Signin Successful');
     };
 
     return {
       formData,
-      handleSignup,
+      handleSignin,
     };
   },
 };

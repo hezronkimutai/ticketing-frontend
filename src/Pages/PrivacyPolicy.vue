@@ -1,16 +1,16 @@
 <template>
   <div class="container mx-auto px-4">
-    <SignupForm />
+    <PrivacyPolicy />
   </div>
 </template>
 
 <script>
-import SignupForm from '@/components/signup/Signup.vue'
+import PrivacyPolicy from '@/components/privacyPolicy/PrivacyPolicy.vue';
 
 export default {
   name: 'SignupPage',
   components: {
-    SignupForm
+    PrivacyPolicy
   }
 }
 </script>
